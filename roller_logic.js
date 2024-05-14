@@ -177,7 +177,7 @@ function rollType() {
   else if (rolled < 100)
     return "rev";
   else
-    return "act";
+    return "act1";
 }
 
 function getStats() {
@@ -212,9 +212,12 @@ function getMults(type) {
       return [3,3,4,0,3,3];
     case "Hive":
       return [3,2,3,8,3,3];
-    //can't do act since each act has differnt mults/stats
-    default:
-      return [0,0,0,0,0,0];
+    case "Act1":
+      return [2,3,3,8,3,3];
+    case "Act2":
+      return [2,3,3,3,3,5];
+    case "Act3":
+      return [4,3,4,1,4,2];
   }
 }
 
