@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script async src="roller_logic.js"></script>
   </head>
-  <body  style="text-align:center;background-color:powderblue;">
+  <body  style="text-align:center;background-color:#ceb0e6;">
     <h1>JoJo D&D Stat Roller</h1>
     <p>Easily roll and calculate character and stand stats by selecting the desired options below.</p>
     <div id="content" style="margin-right:auto;margin-left:auto;border:2px solid purple;border-radius:5px;width:50%;padding:8px;">
@@ -66,15 +66,21 @@
       <input type="radio" id="abl" class="type" name="type" value="Ability">
       <label for="abl">Ability</label>
       <input type="radio" id="enh" class="type" name="type" value="Enhancement">
-      <label for="enh">Enhancement</label><br>
+      <label for="enh">Enhancement</label>
       <input type="radio" id="rev" class="type" name="type" value="Revenge">
       <label for="rev">Revenge</label>
       <input type="radio" id="ind" class="type" name="type" value="Independent">
       <label for="ind">Independent</label>
       <input type="radio" id="hive" class="type" name="type" value="Hive">
-      <label for="hive">Hive</label>
-      <input type="radio" id="act" class="type" name="type" value="Act">
-      <label for="act">Act</label><br>
+      <label for="hive">Hive</label><br>
+      <input type="radio" id="act-close" class="type" name="type" value="Act-Close">
+      <label for="act">Close-Range Act</label>
+      <input type="radio" id="act-long" class="type" name="type" value="Act-Long">
+      <label for="act">Long-Range Act</label>
+      <input type="radio" id="act-ability" class="type" name="type" value="Act-Ability">
+      <label for="act">Ability-Focused Act</label>
+      <input type="radio" id="act-remote" class="type" name="type" value="Act-Remote">
+      <label for="act">Remote-Focused Act</label><br>
       <button id="rand-type" style="margin-top:8px;">Randomize Type</button>
       <p>(Type is randomized using a d100 roll, see the table on <a href='https://www.jojodnd.com/classes/?focus=Stands' target="_blank">this page</a> for reference.)</p>
       <table style="table-layout:fixed;width:100%;">

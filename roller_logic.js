@@ -176,8 +176,18 @@ function rollType() {
     return "hive";
   else if (rolled < 100)
     return "rev";
-  else
-    return "act";
+  else {
+    switch (roll(1,4)) {
+      case 1:
+        return "act-close";
+      case 2:
+        return "act-long";
+      case 3:
+        return "act-ability";
+      case 4:
+        return "act-remote";
+    }
+  }
 }
 
 function getStats() {
@@ -212,9 +222,14 @@ function getMults(type) {
       return [3,3,4,0,3,3];
     case "Hive":
       return [3,2,3,8,3,3];
-    //can't do act since each act has differnt mults/stats
-    default:
-      return [0,0,0,0,0,0];
+    case "Act-Close":
+      return [3,3,3,1,4,2];
+    case "Act-Long":
+      return [3,3,3,8,3,3];
+    case "Act-Ability":
+      return [1,2,1,3,3,5];
+    case "Act-Remote":
+      return [3,2,3,4,3,2];
   }
 }
 
